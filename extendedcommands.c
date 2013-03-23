@@ -601,7 +601,7 @@ int confirm_selection(const char* title, const char* confirm)
 #ifdef BOARD_TOUCH_RECOVERY
     one_confirm = 1;
 #endif 
-    if (one_confirm) {
+     if (one_confirm) {
         char* items[] = { "No",
                         confirm, //" Yes -- wipe partition",   // [1]
                         NULL };
@@ -609,20 +609,11 @@ int confirm_selection(const char* title, const char* confirm)
         return chosen_item == 1;
     }
     else {
-        char* items[] = { "No",
-                        "No",
-                        "No",
-                        "No",
-                        "No",
-                        "No",
-                        "No",
-                        confirm, //" Yes -- wipe partition",   // [7]
-                        "No",
-                        "No",
+        char* items[] = { confirm, //Yes, [0],
                         "No",
                         NULL };
         int chosen_item = get_menu_selection(confirm_headers, items, 0, 0);
-        return chosen_item == 7;
+        return chosen_item == 0;
     }
     }
 
