@@ -713,10 +713,6 @@ prompt_and_wait() {
                 show_install_update_menu();
                 break;
 
-            case ITEM_APPLY_SIDELOAD:
-                apply_from_adb();
-                break;
-
             case ITEM_NANDROID:
                 show_nandroid_menu();
                 break;
