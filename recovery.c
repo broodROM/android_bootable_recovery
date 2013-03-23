@@ -304,7 +304,6 @@ finish_recovery(const char *send_intent) {
 
 static int
 erase_volume(const char *volume) {
-    ui_set_background(BACKGROUND_ICON_INSTALLING);
     ui_show_indeterminate_progress();
     ui_print("Formatting %s...\n", volume);
 
