@@ -60,7 +60,7 @@ static int gShowBackButton = 0;
 UIParameters ui_parameters = {
     6,       // indeterminate progress bar frames
     20,      // fps
-    7,       // installation icon frames (0 == static image)
+    0,       // installation icon frames (0 == static image)
     13, 190, // installation icon overlay offset
 };
 
@@ -233,7 +233,8 @@ static void draw_text_line(int row, const char* t) {
 }
 
 //#define MENU_TEXT_COLOR 255, 160, 49, 255
-#define MENU_TEXT_COLOR 0, 191, 255, 255
+//#define MENU_TEXT_COLOR 0, 191, 255, 255
+#define MENU_TEXT_COLOR 44, 129, 36, 255
 #define NORMAL_TEXT_COLOR 200, 200, 200, 255
 #define HEADER_TEXT_COLOR NORMAL_TEXT_COLOR
 
