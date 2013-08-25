@@ -45,6 +45,7 @@
 int signature_check_enabled = 1;
 int script_assert_enabled = 1;
 static const char *SDCARD_UPDATE_FILE = "/sdcard/update.zip";
+static const char *AROMA_PATH = "/sdcard/clockworkmod/aroma.zip"
 
 int
 get_filtered_menu_selection(char** headers, char** items, int menu_only, int initial_selection, int items_count) {
@@ -122,7 +123,7 @@ void show_install_update_menu()
     };
     
     char* install_menu_items[] = {  "choose zip from sdcard",
-                                    "apply /sdcard/update.zip",
+                                    "run aroma filemanager",
                                     "toggle signature verification",
                                     NULL,
                                     NULL };
@@ -147,8 +148,7 @@ void show_install_update_menu()
                 break;
             case ITEM_APPLY_SDCARD:
             {
-                if (confirm_selection("Confirm install?", "Yes - Install /sdcard/update.zip"))
-                    install_zip(SDCARD_UPDATE_FILE);
+                install_zip(AROMA_PATH);
                 break;
             }
             case ITEM_CHOOSE_ZIP:
